@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
         if ($row['Email'] == $_POST['email']) {
             $COUNT = 1;
 
-            if ($row['password'] == md5($_POST["password"])) {
+            if ($row['password'] ==($_POST["password"])) {
                 $_SESSION['user'] = $_POST['email'];
                 $_SESSION['name'] = $row['first'];
                 $_SESSION['last'] = $row['last'];
