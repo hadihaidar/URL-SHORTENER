@@ -118,7 +118,7 @@ if (isset($_SESSION['name'])) {
                                     $last =  $db->quote($_POST["last"]);
                                     $email = $db->quote($_POST["email"]);
                                     $password = $_POST["password"];
-                                    $password = $db->quote(md5($password));
+                                    $password = $db->quote(($password));
 									$id = $db->quote(md5(uniqid().uniqid()));
                                     $query = $db->exec("INSERT INTO users VALUES ($first, $last,$email,$password,$id);");
                                     if ($query) {
